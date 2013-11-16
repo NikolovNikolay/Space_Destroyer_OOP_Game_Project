@@ -8,7 +8,7 @@ namespace SpaceDestroyerGame
 {
     public class EnemySpaceCraftProtoOne : EnemySpaceCraft
     {
-        public EnemySpaceCraftProtoOne(Position position, ConsoleColor color = ConsoleColor.Red): base(position)
+        public EnemySpaceCraftProtoOne(Position position): base(position)
         {
             this.color = color;
             this.body = new char[,] { 

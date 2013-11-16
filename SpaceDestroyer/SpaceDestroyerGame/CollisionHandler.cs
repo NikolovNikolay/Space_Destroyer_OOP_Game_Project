@@ -8,7 +8,7 @@ namespace SpaceDestroyerGame
 {
     public static class CollisionHandler
     {
-        public static long  CollisionCheck(List<MovingObject> movingObjects, List<Bullet> bullets, PlayerSpaceCraft craft, long score)
+        public static long[] CollisionCheck(List<MovingObject> movingObjects, List<Bullet> bullets, PlayerSpaceCraft craft, long[] data)
         {
             foreach (var obj in movingObjects)
             {
@@ -39,6 +39,14 @@ namespace SpaceDestroyerGame
                         craft.Collide(obj);
                     } 
                 }
+                else if(obj is Gift)
+                {
+                    if(obj.GetPosition.Row == craft.GetPosition.Row && (obj.GetPosition.Col>= craft.GetPosition.Col && obj.GetPosition.Col <= craft.GetPosition.Col + 8))
+                    {
+                         obj.Collide(craft);
+                        craft.Collide(obj);                        
+                    }
+                }
             
 
                 foreach (var bullet in bullets)
@@ -48,10 +56,11 @@ namespace SpaceDestroyerGame
                         if (bullet.GetPosition.Row == obj.GetPosition.Row + 3 && (bullet.GetPosition.Col >= obj.GetPosition.Col &&
                                         bullet.GetPosition.Col <= obj.GetPosition.Col + 3))
                         {
-                             bullet.Collide(obj);
+                            bullet.Collide(obj);
                             obj.Collide(bullet);
                             Console.ForegroundColor = ConsoleColor.Green;
-                            score += 50;
+                            data[0] += 50;
+                            data[1] += 1;
                         } 
                     }
                     else if(obj is Asteroid)
@@ -61,7 +70,8 @@ namespace SpaceDestroyerGame
                             bullet.Collide(obj);
                             obj.Collide(bullet);
                             Console.ForegroundColor = ConsoleColor.Green;
-                            score += 60;
+                            data[0] += 60;
+                            data[2] += 1;
                         } 
                     }
                     else if(obj is Meteor)
@@ -72,14 +82,15 @@ namespace SpaceDestroyerGame
                             bullet.Collide(obj);
                             obj.Collide(bullet);
                             Console.ForegroundColor = ConsoleColor.Green;
-                            score+= 75;
+                            data[0] += 75;
+                            data[3] += 1;
                         } 
                     }
                     
                 }
             }
 
-            return score;
+            return data;
         }
     }
 }

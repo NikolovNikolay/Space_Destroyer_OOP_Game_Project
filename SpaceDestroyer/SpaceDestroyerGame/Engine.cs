@@ -18,7 +18,7 @@ namespace SpaceDestroyerGame
         PlayerSpaceCraft cruiser;
         int sleep;
         private int accidentalDropCounter;
-        long score;
+        long[] score;
 
         public Engine(IRenderer renderer, IUserInterface userInterface, int speed)
         {
@@ -30,20 +30,20 @@ namespace SpaceDestroyerGame
             this.protoOneEnemies = new List<EnemySpaceCraft>();
             this.bullets = new List<Bullet>();
             this.accidentalDropCounter = 0;
-            this.score = 0;
+            this.score = new long[4];
         }
 
 
         public virtual void AddObject(GameObject obj)
         {
-           if(obj is EnemySpaceCraftProtoOne || obj is Asteroid || obj is Meteor)
+           if(obj is EnemySpaceCraftProtoOne || obj is Asteroid || obj is Meteor || obj is Gift)
            {
                this.movingObjects.Add(obj as MovingObject);
            }
            else if(obj is Bullet)
            {
                this.bullets.Add(obj as Bullet);
-           }
+           }          
            
            this.allObjects.Add(obj);
         }
@@ -56,16 +56,21 @@ namespace SpaceDestroyerGame
 
         public void Run()
         {
-            bool endLoop = false;
+            bool dead = false;
             BorderDraw();
             while (true)
-            {                
+            {           
+     
                 accidentalDropCounter++;
+                if (!dead)
+                {
+                    this.score[0]++; 
+                }
                 this.userInterface.ProcessInput();
                 Thread.Sleep(this.sleep);
                 Random rand = new Random();
 
-                if(accidentalDropCounter % 10 == 0 && this.protoOneEnemies.Count < 10)
+                if(accidentalDropCounter % 4 == 0 && this.protoOneEnemies.Count < 10)
                 {
                     this.AddObject(new EnemySpaceCraftProtoOne(new Position(0, rand.Next(1, Console.BufferWidth-1))));
                 }
@@ -75,24 +80,29 @@ namespace SpaceDestroyerGame
                     this.AddObject(new Star(new Position(0, rand.Next(1, Console.BufferWidth + 1)), new char[,] { { '.' } }));
                 }
 
-                if(accidentalDropCounter % 24 == 0)
+                if(accidentalDropCounter % 21 == 0)
                 {
-                    this.AddObject(new AsteroidLeftAttack(new Position(rand.Next(1, Console.BufferWidth + 1),(Console.BufferHeight - Console.BufferHeight))));
+                    this.AddObject(new AsteroidLeftAttack(new Position(rand.Next(1, Console.BufferWidth/3 + 1), -3)));
                 }
 
-                if (accidentalDropCounter % 29 == 0)
+                if (accidentalDropCounter % 23 == 0)
                 {
-                    this.AddObject(new AsteroidRightAttack(new Position(rand.Next(0, Console.BufferHeight + 1), Console.BufferWidth+5)));
+                    this.AddObject(new AsteroidRightAttack(new Position(rand.Next(0, Console.BufferHeight/3 + 1), Console.BufferWidth + 3)));
                 }
 
-                if (accidentalDropCounter % 70 == 0)
+                if (accidentalDropCounter % 50 == 0)
                 {
-                    this.AddObject(new MeteorRightAttack(new Position(rand.Next(0, Console.BufferHeight + 1), Console.BufferWidth + 5)));
+                    this.AddObject(new MeteorRightAttack(new Position(rand.Next(0, Console.BufferHeight/3  + 1), Console.BufferWidth + 3)));
                 }
 
                 if (accidentalDropCounter % 60 == 0)
                 {
-                    this.AddObject(new MeteorLeftAttack(new Position(rand.Next(0, Console.BufferWidth + 1), (Console.BufferHeight - Console.BufferHeight))));
+                    this.AddObject(new MeteorLeftAttack(new Position(rand.Next(0, Console.BufferWidth/3  + 1), -3 )));
+                }
+
+                if(accidentalDropCounter % 16 == 0)
+                {
+                    this.AddObject(new LifeGift(new Position(0,rand.Next(1,Console.BufferWidth-1))));
                 }
 
                 for (int i = 0; i < this.allObjects.Count; i++)
@@ -123,27 +133,19 @@ namespace SpaceDestroyerGame
 
                     if(this.cruiser.hitPoints <= 0)
                     {
+                        dead = true;
                         GameOver.PrintGameOver();                        
                     }
                 }
                
-               
                 this.renderer.Render();
                 Console.ForegroundColor = ConsoleColor.White;
+                Console.SetCursorPosition(0, Console.BufferHeight - 8);
+                Console.Write(new string(' ', Console.BufferWidth));
                 Lives();
-                ScorePrinter();
+                ScoreDataPrinter();
                 this.renderer.ClearObjectMatrix();                
             }
-        }
-
-        private void ScorePrinter()
-        {
-            Console.SetCursorPosition(28, Console.BufferHeight - 8);
-            Console.Write(new string(' ', 20));
-            Console.SetCursorPosition(28, Console.BufferHeight - 8);
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.Write("SCORE: {0}", this.score);
-            Console.ResetColor();
         }
 
         private static void BorderDraw()
@@ -153,13 +155,28 @@ namespace SpaceDestroyerGame
             Console.Write(new string('=', Console.BufferWidth));
         }
 
+        private void ScoreDataPrinter()
+        {            
+            Console.SetCursorPosition(15, Console.BufferHeight - 8);
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write("SCORE: {0}", this.score[0]);
+            Console.SetCursorPosition(35 , Console.BufferHeight - 8);
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write("ENEMIES: {0}", this.score[1]);
+            Console.SetCursorPosition(49 , Console.BufferHeight - 8);
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
+            Console.Write("ASTEROIDS: {0}", this.score[2]);
+            Console.SetCursorPosition(65  , Console.BufferHeight - 8);
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.Write("METEORS: {0}", this.score[3]);
+            Console.ResetColor();
+        }
+        
         private void Lives()
         {
             Console.SetCursorPosition(5, Console.BufferHeight - 8);
-            Console.Write( new string(' ', 19));
-            Console.SetCursorPosition(5, Console.BufferHeight - 8);
             Console.ForegroundColor = ConsoleColor.Magenta;
-            Console.Write("HITS TO DEATH: {0}", new string('\u2665', this.cruiser.hitPoints));
+            Console.Write("HITS {0}", new string('\u2665', this.cruiser.hitPoints));
             Console.ResetColor();
         }
 

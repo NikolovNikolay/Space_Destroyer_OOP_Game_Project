@@ -61,12 +61,21 @@ namespace SpaceDestroyerGame
 
         public override void Collide(GameObject obj)
         {
-            this.hitPoints--;
-            Console.ForegroundColor = ConsoleColor.Red;
-            if (this.hitPoints <= 0)
+            if(obj is LifeGift)
             {
-                this.isDestroyed = true;
-                this.position = new Position(0, 0);
+                Console.ForegroundColor = ConsoleColor.Green;
+                if (this.hitPoints < 4)
+                    this.hitPoints++;
+            }
+            else
+            {
+                this.hitPoints--;
+                Console.ForegroundColor = ConsoleColor.Red;               
+                if (this.hitPoints <= 0)
+                {
+                    this.isDestroyed = true;
+                    this.position = new Position(0, 0);
+                } 
             }
         }
          

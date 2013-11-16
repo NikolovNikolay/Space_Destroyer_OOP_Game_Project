@@ -16,7 +16,7 @@ namespace SpaceDestroyerGame
             IUserInterface keyboard = new KeyboardInterface();
             IRenderer renderer = new Renderer(Console.BufferHeight-10, Console.BufferWidth-1);
 
-            Engine engine = new Engine(renderer, keyboard, 100);
+            Engine engine = new Engine(renderer, keyboard, 60) ;
 
             SpaceCraft craft = new PlayerSpaceCraft(new Position(Console.BufferHeight - 14, Console.BufferWidth / 2));            
             engine.AddCruiser(craft);

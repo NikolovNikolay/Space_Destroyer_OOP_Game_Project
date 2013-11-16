@@ -52,11 +52,13 @@
     <Compile Include="Engine.cs" />
     <Compile Include="GameObject.cs" />
     <Compile Include="GameOver.cs" />
+    <Compile Include="Gift.cs" />
     <Compile Include="ICollidable.cs" />
     <Compile Include="IRenderable.cs" />
     <Compile Include="IRenderer.cs" />
     <Compile Include="IUserInterface.cs" />
     <Compile Include="KeyboardInterface.cs" />
+    <Compile Include="LifeGift.cs" />
     <Compile Include="Meteor.cs" />
     <Compile Include="MeteorLeftAttack.cs" />
     <Compile Include="MeteorRightAttack.cs" />
