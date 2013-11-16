@@ -4,3 +4,5 @@ E:\Dropbox\Telerik Projects\SpaceDestroyer\SpaceDestroyerGame\bin\Debug\SpaceDes
 E:\Dropbox\Telerik Projects\SpaceDestroyer\SpaceDestroyerGame\bin\Debug\SpaceDestroyerGame.pdb
 E:\Dropbox\Telerik Projects\SpaceDestroyer\SpaceDestroyerGame\obj\Debug\SpaceDestroyerGame.exe
 E:\Dropbox\Telerik Projects\SpaceDestroyer\SpaceDestroyerGame\obj\Debug\SpaceDestroyerGame.pdb
+E:\Dropbox\Telerik Projects\SpaceDestroyer\SpaceDestroyerGame\obj\Debug\SpaceDestroyerGame.Properties.Resources.resources
+E:\Dropbox\Telerik Projects\SpaceDestroyer\SpaceDestroyerGame\obj\Debug\SpaceDestroyerGame.csproj.GenerateResource.Cache
