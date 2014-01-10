@@ -1,0 +1,7 @@
+E:\GoogleDrive\Telerik Projects\MyProjects\SpaceDestroyer\SpaceDestroyerGame\bin\Release\SpaceDestroyerGame.exe.config
+E:\GoogleDrive\Telerik Projects\MyProjects\SpaceDestroyer\SpaceDestroyerGame\bin\Release\SpaceDestroyerGame.exe
+E:\GoogleDrive\Telerik Projects\MyProjects\SpaceDestroyer\SpaceDestroyerGame\bin\Release\SpaceDestroyerGame.pdb
+E:\GoogleDrive\Telerik Projects\MyProjects\SpaceDestroyer\SpaceDestroyerGame\obj\Release\SpaceDestroyerGame.Properties.Resources.resources
+E:\GoogleDrive\Telerik Projects\MyProjects\SpaceDestroyer\SpaceDestroyerGame\obj\Release\SpaceDestroyerGame.csproj.GenerateResource.Cache
+E:\GoogleDrive\Telerik Projects\MyProjects\SpaceDestroyer\SpaceDestroyerGame\obj\Release\SpaceDestroyerGame.exe
+E:\GoogleDrive\Telerik Projects\MyProjects\SpaceDestroyer\SpaceDestroyerGame\obj\Release\SpaceDestroyerGame.pdb

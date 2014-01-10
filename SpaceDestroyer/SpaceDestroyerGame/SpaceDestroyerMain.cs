@@ -1,28 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SpaceDestroyerGame
+﻿namespace SpaceDestroyerGame
 {
+    using SpaceDestroyerGame.Interfaces;
+    using SpaceDestroyerGame.Misc;
+    using SpaceDestroyerGame.Ships;
+    using System;
+    using System.Linq;
+
     class SpaceDestroyerMain
     {
         static void Main(string[] args)
-        {           
+        {
             Console.BufferWidth = Console.WindowWidth = 80;
             Console.BufferHeight = Console.WindowHeight = 50;
 
             IUserInterface keyboard = new KeyboardInterface();
-            IRenderer renderer = new Renderer(Console.BufferHeight-10, Console.BufferWidth-1);
+            IRenderer renderer = new Renderer(Console.BufferHeight - 10, Console.BufferWidth - 1);
 
-            Engine engine = new Engine(renderer, keyboard, 60) ;
+            Engine engine = new Engine(renderer, keyboard, 60);
 
-            SpaceCraft craft = new PlayerSpaceCraft(new Position(Console.BufferHeight - 14, Console.BufferWidth / 2));            
+            SpaceCraft craft = new PlayerSpaceCraft(new Position(Console.BufferHeight - 14, Console.BufferWidth / 2));
             engine.AddCruiser(craft);
 
             HandlePlayerControls(keyboard, engine);
-
             engine.Run();
         }
 
