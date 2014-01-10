@@ -15,7 +15,7 @@ namespace SpaceDestroyerGame
                 if (obj is EnemySpaceCraftProtoOne)
                 {
                     if (obj.GetPosition.Row == craft.GetPosition.Row - 2 && (obj.GetPosition.Col + 2 >= craft.GetPosition.Col &&
-                                        obj.GetPosition.Col + 1 <= craft.GetPosition.Col + 8))
+                                        obj.GetPosition.Col + 1 <= craft.GetPosition.Col + 7))
                     {
                         obj.Collide(craft);
                         craft.Collide(obj);
@@ -24,7 +24,7 @@ namespace SpaceDestroyerGame
                 else if(obj is Meteor)
                 {
                     if ((obj.GetPosition.Row+1 >= craft.GetPosition.Row && obj.GetPosition.Row+1 <= craft.GetPosition.Row +3) && (obj.GetPosition.Col + 2 >= craft.GetPosition.Col &&
-                                        obj.GetPosition.Col + 1 <= craft.GetPosition.Col + 8))
+                                        obj.GetPosition.Col + 1 <= craft.GetPosition.Col + 7))
                     {
                         obj.Collide(craft);
                         craft.Collide(obj);

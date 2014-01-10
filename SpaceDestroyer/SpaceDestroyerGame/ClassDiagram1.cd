@@ -1,70 +1,70 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="SpaceDestroyerGame.Asteroid" Collapsed="true">
-    <Position X="9.75" Y="4.75" Width="1.5" />
+    <Position X="10.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Asteroid.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceDestroyerGame.AsteroidLeftAttack" Collapsed="true">
-    <Position X="8.75" Y="6.25" Width="1.5" />
+    <Position X="9.25" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>AsteroidLeftAttack.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceDestroyerGame.AsteroidRightAttack" Collapsed="true">
-    <Position X="11" Y="6.25" Width="1.5" />
+    <Position X="11.5" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>AsteroidRightAttack.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceDestroyerGame.Bullet" Collapsed="true">
-    <Position X="6.5" Y="3.25" Width="1.5" />
+    <Position X="7" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Bullet.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceDestroyerGame.CollisionHandler" Collapsed="true">
-    <Position X="20.25" Y="0.5" Width="1.5" />
+    <Position X="23" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
       <FileName>CollisionHandler.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceDestroyerGame.CosmicObject" Collapsed="true">
-    <Position X="13.25" Y="3.25" Width="1.5" />
+    <Position X="13.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>CosmicObject.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceDestroyerGame.EnemySpaceCraft" Collapsed="true">
-    <Position X="2" Y="4.75" Width="1.5" />
+    <Position X="2.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>EnemySpaceCraft.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceDestroyerGame.EnemySpaceCraftProtoOne" Collapsed="true">
-    <Position X="2" Y="6.25" Width="1.5" />
+    <Position X="2.5" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>EnemySpaceCraftProtoOne.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceDestroyerGame.Engine" Collapsed="true">
-    <Position X="22" Y="0.5" Width="1.5" />
+    <Position X="24.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAABAAAIAACgEQAAgIAAAADoiAAAACAAAAAACAgAI=</HashCode>
+      <HashCode>AAQAABAAAIAACgFQAAgIAAAABoiAAAACAAAAAACAgAI=</HashCode>
       <FileName>Engine.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceDestroyerGame.GameObject" Collapsed="true">
-    <Position X="9.75" Y="0.5" Width="1.5" />
+    <Position X="11.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAALAAAAAAAAAAIAQQAQAAAACgAAAAgAAAAAA=</HashCode>
       <FileName>GameObject.cs</FileName>
@@ -72,64 +72,78 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="SpaceDestroyerGame.GameOver" Collapsed="true">
-    <Position X="23.75" Y="0.5" Width="1.5" />
+    <Position X="26.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>GameOver.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="SpaceDestroyerGame.Gift" Collapsed="true">
+    <Position X="20.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Gift.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="SpaceDestroyerGame.KeyboardInterface" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="20.25" Y="1.5" Width="1.5" />
+    <Position X="23" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAQAAAAAAQAEAAEAAAAAAgAAAAAAAAAAAACAA=</HashCode>
       <FileName>KeyboardInterface.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
+  <Class Name="SpaceDestroyerGame.LifeGift" Collapsed="true">
+    <Position X="20.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LifeGift.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="SpaceDestroyerGame.Meteor" Collapsed="true">
-    <Position X="16.5" Y="4.75" Width="1.5" />
+    <Position X="15" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAABAQAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Meteor.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceDestroyerGame.MeteorLeftAttack" Collapsed="true">
-    <Position X="17.75" Y="6.25" Width="1.5" />
+    <Position X="13.75" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MeteorLeftAttack.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceDestroyerGame.MeteorRightAttack" Collapsed="true">
-    <Position X="15.5" Y="6.25" Width="1.5" />
+    <Position X="16" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MeteorRightAttack.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceDestroyerGame.MovingObject" Collapsed="true">
-    <Position X="9.75" Y="1.75" Width="1.5" />
+    <Position X="11.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MovingObject.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceDestroyerGame.PlayerBullet" Collapsed="true">
-    <Position X="6.5" Y="4.75" Width="1.5" />
+    <Position X="7" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>PlayerBullet.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceDestroyerGame.PlayerSpaceCraft" Collapsed="true">
-    <Position X="4.25" Y="4.75" Width="1.5" />
+    <Position X="4.75" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAEAAAAAAIAABAAAAAAAAAQAAAAAAAAIQAAAAAAAAAA=</HashCode>
       <FileName>PlayerSpaceCraft.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceDestroyerGame.Renderer" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="22" Y="1.5" Width="1.5" />
+    <Position X="24.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAIAAgAAAAAAAAAAAAAAAAAAAAABAAEQACAAA=</HashCode>
       <FileName>Renderer.cs</FileName>
@@ -137,56 +151,56 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="SpaceDestroyerGame.SpaceCraft" Collapsed="true">
-    <Position X="3" Y="3.25" Width="1.5" />
+    <Position X="3.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>SpaceCraft.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceDestroyerGame.SpaceDestroyerMain" Collapsed="true">
-    <Position X="23.75" Y="1.5" Width="1.5" />
+    <Position X="26.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>SpaceDestroyerMain.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceDestroyerGame.Star" Collapsed="true">
-    <Position X="13.25" Y="4.75" Width="1.5" />
+    <Position X="18.25" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Star.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Struct Name="SpaceDestroyerGame.Position" Collapsed="true">
-    <Position X="20.25" Y="2.75" Width="1.5" />
+    <Position X="23" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAgAAAAAAAAAAAAA=</HashCode>
       <FileName>Position.cs</FileName>
     </TypeIdentifier>
   </Struct>
   <Interface Name="SpaceDestroyerGame.ICollidable" Collapsed="true">
-    <Position X="20.25" Y="4" Width="1.5" />
+    <Position X="23" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ICollidable.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="SpaceDestroyerGame.IRenderable" Collapsed="true">
-    <Position X="22" Y="4" Width="1.5" />
+    <Position X="24.75" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IRenderable.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="SpaceDestroyerGame.IRenderer" Collapsed="true">
-    <Position X="23.75" Y="4" Width="1.5" />
+    <Position X="26.5" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAABAAEAAAAAA=</HashCode>
       <FileName>IRenderer.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="SpaceDestroyerGame.IUserInterface" Collapsed="true">
-    <Position X="20.25" Y="4.75" Width="1.5" />
+    <Position X="23" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAQAAAAAAQAEAAEAAAAAAgAAAAAAAAAAAACAA=</HashCode>
       <FileName>IUserInterface.cs</FileName>
